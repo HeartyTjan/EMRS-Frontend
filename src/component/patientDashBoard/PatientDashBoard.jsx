@@ -1,4 +1,4 @@
-import SideBar from "../sideBar/sideBar";
+import SideBar from "../sideBar/SideBar";
 import "./PatientDashBoard.css";
 import Header from "../header/Header";
 

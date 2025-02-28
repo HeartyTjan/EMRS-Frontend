@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.registrationContainer {
+  background: url("registration_backgroundImage.jpg") no-repeat center center /
+    cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerRegistrationContainer {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  height: 598px;
+}
+
+.registerText {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.toggle {
+  display: flex;
+  justify-content: right;
+  /* border: groove; */
+  width: 450px;
+  height: 30px;
+  align-items: center;
+  transform: translateY(-34px);
+  gap: 15px;
+}
+
+.authToggleSign-in {
+  text-align: right;
+  /* border: groove; */
+  cursor: pointer;
+  color: gray;
+}
+
+.authToggleSign-in:hover {
+  color: #88c0d0;
+}
+
+.authToggleRegister {
+  background-color: #88c0d0;
+  font-weight: bold;
+  /* width: 20px; */
+}
+.formContainer {
+  /* border: groove; */
+}
+
+.registerForm {
+  margin-top: 10px;
+  height: 450px;
+  display: grid;
+}
+/* .registerForm > input {
+
+} */
+.customInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.customInput::placeholder {
+  color: #aaa;
+}
+
+.registerForm > label {
+  display: block;
+  font-size: 17px;
+  margin: 10px 0 5px;
+  margin-top: 10px;
+}
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.checkboxContainer > label {
+  margin-left: 20px;
+}
+
+.signUp {
+  background-color: #88c0d0;
+  color: #e5e9f0;
+  height: 35px;
+  border-radius: 10px;
+}
+
+#roleReg {
+  margin-top: 10px;
+  width: 80px;
+  height: 30px;
+  border: groove;
+}

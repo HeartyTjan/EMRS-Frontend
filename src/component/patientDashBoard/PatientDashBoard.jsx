@@ -1,6 +1,6 @@
-import Header from "../header/header";
 import SideBar from "../sideBar/sideBar";
 import "./PatientDashBoard.css";
+import Header from "../header/Header";
 
 function PatientDashBoard() {
   return (

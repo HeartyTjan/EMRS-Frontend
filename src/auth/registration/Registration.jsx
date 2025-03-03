@@ -142,7 +142,7 @@ function Registration() {
               className="customInput"
               onChange={handlePassword}
             />
-            <button onClick={togglePasswordVisibility}></button>
+            {/* <button onClick={togglePasswordVisibility}></button> */}
 
             <select
               name="roleReg"

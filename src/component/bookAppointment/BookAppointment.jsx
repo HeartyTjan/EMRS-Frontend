@@ -1,5 +1,9 @@
 function BookAppointment() {
-  return <div>Book apadm</div>;
+  return (
+    <div>
+      <h2>Book apadmshudada</h2>
+    </div>
+  );
 }
 
 export default BookAppointment;

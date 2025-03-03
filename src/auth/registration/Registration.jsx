@@ -11,6 +11,7 @@ function Registration() {
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("doctor");
   const [showPassword, setShowPassword] = useState(false);
+  const [checkbox, setCheckBox] = useState(false);
 
   let navigate = useNavigate();
 
@@ -32,6 +33,10 @@ function Registration() {
 
   const handleRole = (e) => {
     setRole(e.target.value);
+  };
+
+  const handleCheckBox = (e) => {
+    setCheckBox();
   };
 
   const handleSubmit = async (e) => {
@@ -142,7 +147,6 @@ function Registration() {
               className="customInput"
               onChange={handlePassword}
             />
-            {/* <button onClick={togglePasswordVisibility}></button> */}
 
             <select
               name="roleReg"
@@ -155,7 +159,11 @@ function Registration() {
             </select>
 
             <div className="checkboxContainer">
-              <input type="checkbox" name="checkbox" />
+              <input
+                type="checkbox"
+                name="checkbox"
+                onChange={handleCheckBox}
+              />
               <label>I agree to the terms and conditions</label>
             </div>
 

@@ -12,7 +12,9 @@ function PatientDashBoard() {
       <div className="sidePa">
         <SideBar />
         <PatientBody className="patient-body" />
-        <Outlet />
+        <main>
+          <Outlet />
+        </main>
       </div>
     </div>
   );

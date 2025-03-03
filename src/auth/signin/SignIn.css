@@ -164,3 +164,36 @@
     border: groove;
   }
 }
+
+/* @media (min-width: 1001px) and (max-width: 1400px) {
+  .loginContainer {
+    background: url("registration_backgroundImage.jpg") no-repeat center center /
+      cover;
+    width: 110vw;
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loginToggle {
+    display: flex;
+    justify-content: right;
+    width: 1000px;
+    height: 30px;
+    align-items: center;
+    transform: translateY(-34px);
+    gap: 15px;
+  }
+
+  .innerLoginContainer {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    height: 460px;
+    margin-right: 70px;
+    border: groove;
+  }
+} */

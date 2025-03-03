@@ -19,8 +19,13 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/patientDashBoard",
-    element: <PatientDashBoard />,
+    path: "/book",
+    children: [
+      {
+        path: "*",
+        element: <PatientDashBoard />,
+      },
+    ],
   },
 ]);
 

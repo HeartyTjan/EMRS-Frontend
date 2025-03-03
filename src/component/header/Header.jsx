@@ -4,8 +4,9 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Header({ Patient }) {
+function Header({ patient }) {
   const [logout, setLogout] = useState(false);
+
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -26,7 +27,7 @@ function Header({ Patient }) {
               width="10px"
               className="headerFont"
             />
-            {Patient}
+            {patient}
           </h3>
           <h3 onClick={() => handleLogout()}>Logout</h3>
         </div>

@@ -1,0 +1,68 @@
+.book-appointment {
+  width: 650px;
+  height: auto;
+  margin: auto;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: #f9f9f9;
+}
+
+.appointmentHeaderText {
+  text-align: center;
+  background: linear-gradient(135deg, #2c3e50, #4c7cab);
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+}
+
+.appointmentHeaderText h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.appointmentForm {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group h3 {
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 18px;
+}
+
+.appointmentDateTime,
+#chooseDoctor {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.bookAppointment {
+  width: 100%;
+  padding: 10px;
+  background: #2c3e50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.bookAppointment:hover {
+  background: #1a252f;
+}
+
+@media (max-width: 600px) {
+}

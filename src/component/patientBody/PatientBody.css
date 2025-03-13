@@ -7,6 +7,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
+  color: #333;
 }
 
 .patient-container {
@@ -23,10 +24,20 @@ body {
   padding: 10px;
   text-align: center;
   width: 100%;
-  background-color: #fff;
+  background: linear-gradient(135deg, #2c3e50, #4c7cab);
   border: 2px solid #ddd;
   border-radius: 10px;
   margin-bottom: 20px;
+  color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.body-link {
+  text-decoration: none;
+}
+
+.body-link:hover {
+  cursor: pointer;
 }
 
 .service-container {
@@ -40,18 +51,19 @@ body {
 .service-container > div {
   flex: 1 1 calc(33.33% - 20px);
   text-align: center;
+  max-width: 320px;
 }
 
-.service-container > div:nth-child(4) {
+/* .service-container > div:nth-child(4) {
   flex: 1 1 100%;
-}
+} */
 .profile-container,
 .book-appointment-container,
 .report-container,
 .previous-appointment-container {
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -59,6 +71,8 @@ body {
   margin-top: 30px;
   width: 500px;
   height: 200px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #2c3e50;
 }
 
 .profile-container:hover,
@@ -109,6 +123,7 @@ body {
     margin-top: 15px;
     width: 330px;
     height: 190px;
+    border-left: 6px solid #2c3e50;
   }
 
   .profile-container h2,
@@ -138,6 +153,7 @@ body {
     margin-top: 20px;
     width: 250px;
     height: 160px;
+    border-left: 6px solid #2c3e50;
   }
 
   .book-appointment-container h4 {
@@ -186,6 +202,7 @@ body {
     width: 210px;
     height: 150px;
     text-align: center;
+    border-left: 6px solid #2c3e50;
   }
 
   .profile-container h2,
@@ -216,6 +233,7 @@ body {
     margin-top: 20px;
     width: 250px;
     height: 160px;
+    border-left: 6px solid #2c3e50;
   }
 
   .book-appointment-container h4 {

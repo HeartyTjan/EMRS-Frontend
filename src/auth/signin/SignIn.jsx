@@ -1,5 +1,8 @@
 import swal from "sweetalert2";
 import { Link, useNavigate } from "react-router-dom";
+import { setPatientData } from "../../app/PatientSlice";
+import { setDoctorData } from "../../app/DoctorSlice";
+import { useDispatch } from "react-redux";
 
 import "./SignIn.css";
 import { useState } from "react";
@@ -9,6 +12,7 @@ function SignIn() {
   const [role, setRole] = useState("doctor");
 
   let navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleLoginEmail = (e) => {
     setLoginEmail(e.target.value);
@@ -43,18 +47,28 @@ function SignIn() {
 
       if (role === "patient") {
         const patientApi = "http://localhost:8080/patient/login";
-        const patientDashboard = "/patientDashBoard";
-        fetchFromApi(patientApi, patientDashboard, userLoginData);
+        const patientDashboard = "/patient";
+        fetchFromApi(
+          patientApi,
+          patientDashboard,
+          userLoginData,
+          setPatientData
+        );
       }
 
       if (role === "doctor") {
         const doctorApi = "http://localhost:8080/doctor/login";
         const doctorDashboard = "/doctorDashBoard";
-        fetchFromApi(doctorApi, doctorDashboard, userLoginData);
+        fetchFromApi(doctorApi, doctorDashboard, userLoginData, setDoctorData);
       }
     }
   };
-  const fetchFromApi = async (urlLink, navigationPath, userLoginData) => {
+  const fetchFromApi = async (
+    urlLink,
+    navigationPath,
+    userLoginData,
+    setUserData
+  ) => {
     try {
       const response = await fetch(urlLink, {
         method: "POST",
@@ -64,11 +78,23 @@ function SignIn() {
       if (!response.ok) throw new Error("Request Failed");
 
       const data = await response.json();
+
+      const userData = data.data;
+
+      // setPatientData(userData);
+      if (setUserData) {
+        dispatch(setUserData(userData));
+      }
+      // dispatch(setUserData(userData));
+      console.log("Patient data from API:", userData);
+
       swal.fire({
         title: `${data.message}`,
       });
       if (data.success) {
-        navigate(navigationPath);
+        setTimeout(() => {
+          navigate(navigationPath);
+        }, 500);
       }
     } catch (error) {
       console.error(error);

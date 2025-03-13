@@ -1,4 +1,5 @@
 import "./SideBar.css";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
@@ -7,18 +8,22 @@ import {
   faFile,
 } from "@fortawesome/free-solid-svg-icons";
 
-function SideBar() {
+function SideBar({ toggle }) {
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${toggle ? "open" : ""}`}>
       <div className="sidebar-content">
         <ul>
           <li>
             <FontAwesomeIcon icon={faHome} width="10px" className="sideIcon" />
-            Dashboard
+            <Link to="/patient" className="sidebar-link">
+              Dashboard
+            </Link>
           </li>
           <li>
             <FontAwesomeIcon icon={faUser} width="10px" className="sideIcon" />
-            Profile
+            <Link to="/patient/profile" className="sidebar-link">
+              Profile
+            </Link>
           </li>
           <li>
             <FontAwesomeIcon
@@ -26,23 +31,26 @@ function SideBar() {
               width="10px"
               className="sideIcon"
             />
-            Book Appointment
+            <Link to="/patient/appointment" className="sidebar-link">
+              Book Appointment
+            </Link>
           </li>
-          {/* <li>
-            <FontAwesomeIcon icon={faFile} width="10px" className="sideIcon" />
-            Invoice
-          </li> */}
+
           <li>
             <FontAwesomeIcon
               icon={faCalendarAlt}
               width="10px"
               className="sideIcon"
             />
-            Old Appointments
+            <Link to="/patient/oldAppointment" className="sidebar-link">
+              Old Appointments
+            </Link>
           </li>
           <li>
             <FontAwesomeIcon icon={faFile} width="10px" className="sideIcon" />
-            Report
+            <Link to="/patient/reports" className="sidebar-link">
+              Report
+            </Link>
           </li>
         </ul>
       </div>

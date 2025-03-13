@@ -25,7 +25,10 @@
   cursor: pointer;
   transition: color 0.3s ease;
 }
-
+.sidebar-link {
+  text-decoration: none;
+  color: #fff;
+}
 .sidebar-content ul li:hover {
   color: #3498db;
 }
@@ -37,5 +40,9 @@
 @media (max-width: 600px) {
   .sidebar {
     display: none;
+  }
+
+  .sidebar.open {
+    display: block;
   }
 }

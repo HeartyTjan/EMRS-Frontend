@@ -3,16 +3,18 @@ import { Link } from "react-router-dom";
 function PatientBody() {
   return (
     <div className="patient-container">
-      {/* <div className="body"> */}
       <div className="service-header">Patient Dashboard</div>
       <div className="service-container">
         <div className="profile-container">
-          <h2>Profile</h2>
+          <Link to="/patient/profile" className="body-link">
+            <h2>Profile</h2>
+          </Link>
+
           <h4>Manage your profile</h4>
         </div>
 
         <div className="book-appointment-container">
-          <Link to="/book/appointment">
+          <Link to="/patient/appointment" className="body-link">
             <h2>Make Appointment</h2>
           </Link>
 
@@ -20,18 +22,21 @@ function PatientBody() {
         </div>
 
         <div className="report-container">
-          <h2>My Reports</h2>
-
+          <Link to="/patient/reports" className="body-link">
+            <h2>My Reports</h2>
+          </Link>
           <h4>Check all reports you have done already</h4>
         </div>
 
         <div className="previous-appointment-container">
-          <h2>Previous Appointments</h2>
+          <Link to="/patient/oldAppointment" className="body-link">
+            <h2>Previous Appointments</h2>
+          </Link>
+
           <h4>See the history of your previous bookings</h4>
         </div>
       </div>
     </div>
-    // </div>
   );
 }
 
